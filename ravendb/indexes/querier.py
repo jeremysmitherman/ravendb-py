@@ -14,7 +14,7 @@ class querier(object):
 
         if not isinstance(query, string_types):
             for key, value in query.items():
-                genQuery += '{0} AND {1}:{2}'.format(parsedQuery, key, value)
+                genQuery += ' AND {0}:{1}'.format(key, value)
             genQuery = genQuery[5:]
             qs['query'] = genQuery
         else:
